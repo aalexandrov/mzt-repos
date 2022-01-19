@@ -1,0 +1,21 @@
+## Database
+
+```sql
+DROP DATABASE qgm;
+CREATE DATABASE qgm;
+```
+
+## Schema
+
+```sql
+CREATE TABLE R(x INT NOT NULL, y INT NOT NULL);
+CREATE TABLE S(y INT NOT NULL, z INT NOT NULL);
+CREATE TABLE T(x INT, y INT);
+```
+
+## Data
+
+```sql
+INSERT INTO R VALUES (1, 2), (2, 3);
+INSERT INTO S VALUES (2, 3);
+```

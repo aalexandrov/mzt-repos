@@ -1,0 +1,1 @@
+SELECT R.x, T.x FROM R LEFT JOIN T on R.y=T.y

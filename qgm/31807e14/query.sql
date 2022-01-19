@@ -1,0 +1,1 @@
+SELECT coalesce(x, y) FROM T WHERE x IS NOT NULL

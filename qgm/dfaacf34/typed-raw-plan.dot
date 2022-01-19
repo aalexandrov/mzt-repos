@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Get qgm.public.r (u42)\l  types = (integer, integer)\l  keys = ()\l Map coalesce(#0, #1)\l  types = (integer, integer, integer?)\l  keys = ()\l Project (#2)\l  types = (integer?)\l  keys = ()\l"]
+}

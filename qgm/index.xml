@@ -1,0 +1,37 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>56bdf771</id>
+    <sql>SELECT
+    R.x, R.y, coalesce(S.z, 0)
+FROM
+    R LEFT JOIN S ON (R.y = S.y)</sql>
+  </query>
+  <query>
+    <id>dfaacf34</id>
+    <sql>SELECT coalesce(x, y) FROM R</sql>
+  </query>
+  <query>
+    <id>56b497bb</id>
+    <sql>SELECT
+    R.x, R.y, coalesce(S.z, 0)
+FROM
+    R LEFT JOIN S ON (R.y = S.y AND R.x &gt; S.z)</sql>
+  </query>
+  <query>
+    <id>31807e14</id>
+    <sql>SELECT coalesce(x, y) FROM T WHERE x IS NOT NULL</sql>
+  </query>
+  <query>
+    <id>0b604851</id>
+    <sql>SELECT R.x, T.x FROM R LEFT JOIN T on R.y=T.y</sql>
+  </query>
+  <query>
+    <id>2906c1ef</id>
+    <sql>SELECT coalesce(x, y) FROM T</sql>
+  </query>
+  <query>
+    <id>3d3b1421</id>
+    <sql>select mz_version()</sql>
+  </query>
+</queries>
