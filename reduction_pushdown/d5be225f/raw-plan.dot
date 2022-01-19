@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label=" Get reduction_pushdown.public.r (u1)\l"]
+    node1 [shape = record, label=" CallTable wrap1(1)\l"]
+    node2 [shape = record, label=" InnerJoin %0 %1 on (#0 = #3)\l Map (#1 / #2)\l Project (#0..#2, #4)\l Distinct\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}

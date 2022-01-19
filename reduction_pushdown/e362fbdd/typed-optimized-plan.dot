@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label=" Get reduction_pushdown.public.r (u1)\l  types = (integer, integer, integer)\l  keys = ()\l"]
+    node1 [shape = record, label=" Constant (1) (2)\l  types = (integer)\l  keys = ((#0))\l"]
+    node2 [shape = record, label=" Join %0 %1 (= #0 #3)\l  implementation = Differential %0 %1.(#0)\l  types = (integer, integer, integer, integer)\l  keys = ()\l Project (#0..#2)\l  types = (integer, integer, integer)\l  keys = ()\l Distinct group=(#0, #1, #2, (#1 / #2))\l  types = (integer, integer, integer, integer?)\l  keys = ((#0..#3))\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}
