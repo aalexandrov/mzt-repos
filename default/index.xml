@@ -1,0 +1,10 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>034b62e8</id>
+    <sql>SELECT
+    R.x, R.y, coalesce(S.z, 0)
+FROM
+    R LEFT JOIN S ON (R.y = coalesce(S.y, 0))</sql>
+  </query>
+</queries>
