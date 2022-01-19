@@ -1,0 +1,71 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>d34beb00</id>
+    <sql>SELECT
+    x,
+    y,
+    x + y,
+    x - y,
+    coalesce(x + y, x - y, x)
+FROM
+    U
+WHERE
+    x &gt; 0</sql>
+  </query>
+  <query>
+    <id>0b35ca47</id>
+    <sql>SELECT
+    x,
+    y
+FROM
+    T
+WHERE
+    coalesce(x, y) &gt; 0</sql>
+  </query>
+  <query>
+    <id>a12c62c8</id>
+    <sql>SELECT
+    x,
+    y
+FROM
+    U
+WHERE
+    coalesce(x, y) &gt; 0</sql>
+  </query>
+  <query>
+    <id>03af3ee0</id>
+    <sql>SELECT
+    x,
+    y,
+    x + y,
+    x - y,
+    coalesce(x + y, x - y, y)
+FROM
+    T</sql>
+  </query>
+  <query>
+    <id>f1508531</id>
+    <sql>SELECT
+    x,
+    y,
+    x + y,
+    x - y,
+    coalesce(x + y, x - y, x)
+FROM
+    T
+WHERE
+    x &gt; 0</sql>
+  </query>
+  <query>
+    <id>37fc289b</id>
+    <sql>SELECT
+    x,
+    y,
+    x + y,
+    x - y,
+    coalesce(x + y, x - y, y)
+FROM
+    U</sql>
+  </query>
+</queries>
