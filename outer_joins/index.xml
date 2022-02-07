@@ -1,0 +1,31 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>4446a6d1</id>
+    <sql>SELECT
+    L.x, L.y, R.y, R.z
+FROM
+    L FULL OUTER JOIN R ON L.y = R.y</sql>
+  </query>
+  <query>
+    <id>32cbee3f</id>
+    <sql>SELECT
+    L.x, L.y, R.y, R.z
+FROM
+    L LEFT OUTER JOIN R ON L.y &gt;= R.y</sql>
+  </query>
+  <query>
+    <id>080ad2b0</id>
+    <sql>SELECT
+    L.x, L.y, R.y, R.z
+FROM
+    L LEFT OUTER JOIN R ON L.y = R.y</sql>
+  </query>
+  <query>
+    <id>8306b82d</id>
+    <sql>SELECT
+    L.x, L.y, R.y, R.z
+FROM
+    L FULL OUTER JOIN R ON L.y &gt;= R.y AND L.y &lt;= R.y</sql>
+  </query>
+</queries>
