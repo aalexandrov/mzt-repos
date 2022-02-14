@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Constant (2022-02-14 16:27:51.147 UTC, \"materialize\", \"issue_10445\")\l"]
+}

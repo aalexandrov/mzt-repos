@@ -1,0 +1,7 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>6843b2f5</id>
+    <sql>select now(), current_user(), current_database()</sql>
+  </query>
+</queries>
