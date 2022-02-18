@@ -1,0 +1,11 @@
+digraph G {
+    node0 [shape = record, label=" Get pr_10752.public.z (u74)\l"]
+    node1 [shape = record, label=" Get pr_10752.public.x (u70)\l"]
+    node2 [shape = record, label=" Get pr_10752.public.y (u72)\l"]
+    node3 [shape = record, label=" InnerJoin %1 %2 on (#0 = #1)\l"]
+    node4 [shape = record, label=" InnerJoin %0 %3 on true\l Map \"pr_10752\"\l Project (#3, #0..#2)\l"]
+    node2 -> node3 [label = "%2\l"]
+    node1 -> node3 [label = "%1\l"]
+    node0 -> node4 [label = "%0\l"]
+    node3 -> node4 [label = "%3\l"]
+}

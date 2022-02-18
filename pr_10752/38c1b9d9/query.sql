@@ -1,0 +1,2 @@
+SELECT 'pr_10752', *
+FROM z, LATERAL(SELECT * FROM x INNER JOIN y ON x.a = y.a);

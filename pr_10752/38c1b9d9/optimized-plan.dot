@@ -1,0 +1,9 @@
+digraph G {
+    node0 [shape = record, label=" Get pr_10752.public.z (u74)\l ArrangeBy ()\l"]
+    node1 [shape = record, label=" Get pr_10752.public.x (u70)\l ArrangeBy (#0)\l"]
+    node2 [shape = record, label=" Get pr_10752.public.y (u72)\l ArrangeBy (#0)\l"]
+    node3 [shape = record, label=" Join %0 %1 %2 (= #1 #2)\l  implementation = Differential %1.(#0) %2.(#0) %0.()\l Filter !(isnull(#1))\l Map \"pr_10752\"\l Project (#3, #0, #1, #1)\l"]
+    node2 -> node3 [label = "%2\l"]
+    node1 -> node3 [label = "%1\l"]
+    node0 -> node3 [label = "%0\l"]
+}

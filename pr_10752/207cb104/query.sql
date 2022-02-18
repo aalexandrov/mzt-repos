@@ -1,0 +1,2 @@
+SELECT 'v0.10.0', *
+FROM z, LATERAL(SELECT * FROM x INNER JOIN y ON x.a = y.a);
