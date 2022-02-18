@@ -1,0 +1,88 @@
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+      </td>
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <strong>(_, r<sub>1</sub>)</strong>
+              </td>
+              <td>
+                <strong>(_, r<sub>2</sub>)</strong>
+              </td>
+              <td>
+                (_, r<sub>3</sub>)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <strong>(l<sub>1</sub>, _)</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                (l<sub>2</sub>, _)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <strong>(l<sub>3</sub>, _)</strong>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                (l<sub>1</sub>,r<sub>1</sub>)
+              </td>
+              <td>
+                (l<sub>1</sub>,r<sub>2</sub>)
+              </td>
+              <td>
+                (l<sub>1</sub>,r<sub>3</sub>)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                (l<sub>2</sub>,r<sub>1</sub>)
+              </td>
+              <td>
+                (l<sub>2</sub/>,r<sub>2</sub>)
+              </td>
+              <td>
+                <strong>(l<sub>2</sub/>,r<sub>3</sub>)</strong>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                (l<sub>3</sub>,r<sub>1</sub>)
+              </td>
+              <td>
+                (l<sub>3</sub/>,r<sub>2</sub>)
+              </td>
+              <td>
+                (l<sub>3</sub/>,r<sub>3</sub>)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

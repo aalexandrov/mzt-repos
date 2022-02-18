@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label=" Get simplify_outer_joins.public.l (u94)\l  types = (integer?, integer?)\l  keys = ()\l"]
+    node1 [shape = record, label=" Get simplify_outer_joins.public.r (u96)\l  types = (integer?, integer)\l  keys = ()\l"]
+    node2 [shape = record, label=" FullOuterJoin %0 %1 on (#1 = #2)\l  types = (integer?, integer?, integer?, integer?)\l  keys = ()\l Filter (#0 \< 42)\l  types = (integer?, integer?, integer?, integer?)\l  keys = ()\l"]
+    node0 -> node2 [label = "%0\l"]
+    node1 -> node2 [label = "%1\l"]
+}
