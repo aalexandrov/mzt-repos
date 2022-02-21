@@ -1,0 +1,42 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>c23d1b73</id>
+    <sql>SELECT 
+  s.name,
+  t.lecturenr
+FROM
+  students s,
+  test t
+WHERE
+  s.studnr = t.studnr AND
+  t.grade = (
+    SELECT
+      min(t2.grade)
+    FROM
+      test t2
+    WHERE
+      s.studnr = t2.studnr
+  )</sql>
+  </query>
+  <query>
+    <id>44df8a66</id>
+    <sql>SELECT 
+  s.name
+FROM
+  students s
+WHERE
+  EXISTS (
+    SELECT
+      t.grade
+    FROM
+      test t
+    WHERE
+      s.studnr = t.studnr
+  )</sql>
+  </query>
+  <query>
+    <id>95adb6e7</id>
+    <sql>select 1</sql>
+  </query>
+</queries>

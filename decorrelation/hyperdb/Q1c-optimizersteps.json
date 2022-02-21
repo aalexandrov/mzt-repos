@@ -1,0 +1,1024 @@
+{
+    "optimizersteps": [
+        {
+            "name": "Unoptimized Plan",
+            "plan": {
+                "plan": {
+                    "operator": "select",
+                    "operatorId": 1,
+                    "input": {
+                        "operator": "select",
+                        "operatorId": 2,
+                        "input": {
+                            "operator": "leftmarkjoin",
+                            "operatorId": 3,
+                            "left": {
+                                "operator": "tablescan",
+                                "operatorId": 4,
+                                "segment": 6,
+                                "from": "test",
+                                "values": [
+                                    {
+                                        "name": "studnr",
+                                        "iu": [
+                                            "studnr",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "lecturenr",
+                                        "iu": [
+                                            "lecturenr",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "persnr",
+                                        "iu": [
+                                            "persnr",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "iu": [
+                                            "grade",
+                                            [
+                                                "Numeric",
+                                                2,
+                                                1
+                                            ]
+                                        ]
+                                    }
+                                ],
+                                "tid": [
+                                    "v",
+                                    [
+                                        "BigInt"
+                                    ]
+                                ],
+                                "tableOid": [
+                                    "v2",
+                                    [
+                                        "RegClass"
+                                    ]
+                                ],
+                                "tupleFlags": [
+                                    "v3",
+                                    [
+                                        "BigInt"
+                                    ]
+                                ],
+                                "restrictions": []
+                            },
+                            "right": {
+                                "operator": "select",
+                                "operatorId": 5,
+                                "input": {
+                                    "operator": "select",
+                                    "operatorId": 6,
+                                    "input": {
+                                        "operator": "tablescan",
+                                        "operatorId": 7,
+                                        "segment": 1,
+                                        "from": "students",
+                                        "values": [
+                                            {
+                                                "name": "studnr",
+                                                "iu": [
+                                                    "studnr2",
+                                                    [
+                                                        "Integer"
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "name": "name",
+                                                "iu": [
+                                                    "name",
+                                                    [
+                                                        "Varchar",
+                                                        30
+                                                    ]
+                                                ]
+                                            },
+                                            {
+                                                "name": "semester",
+                                                "iu": [
+                                                    "semester",
+                                                    [
+                                                        "Integer"
+                                                    ]
+                                                ]
+                                            }
+                                        ],
+                                        "tid": [
+                                            "v4",
+                                            [
+                                                "BigInt"
+                                            ]
+                                        ],
+                                        "tableOid": [
+                                            "v5",
+                                            [
+                                                "RegClass"
+                                            ]
+                                        ],
+                                        "tupleFlags": [
+                                            "v6",
+                                            [
+                                                "BigInt"
+                                            ]
+                                        ],
+                                        "restrictions": []
+                                    },
+                                    "condition": {
+                                        "expression": "comparison",
+                                        "mode": "=",
+                                        "left": {
+                                            "expression": "iuref",
+                                            "iu": "studnr2"
+                                        },
+                                        "right": {
+                                            "expression": "iuref",
+                                            "iu": "studnr"
+                                        }
+                                    }
+                                },
+                                "condition": {
+                                    "expression": "const",
+                                    "value": {
+                                        "type": [
+                                            "Bool"
+                                        ],
+                                        "value": true
+                                    }
+                                }
+                            },
+                            "condition": {
+                                "expression": "const",
+                                "value": {
+                                    "type": [
+                                        "Bool"
+                                    ],
+                                    "value": true
+                                }
+                            },
+                            "marker": [
+                                "v7",
+                                [
+                                    "Bool"
+                                ]
+                            ]
+                        },
+                        "condition": {
+                            "expression": "iuref",
+                            "iu": "v7"
+                        }
+                    },
+                    "condition": {
+                        "expression": "const",
+                        "value": {
+                            "type": [
+                                "Bool"
+                            ],
+                            "value": true
+                        }
+                    }
+                },
+                "header": [
+                    "studnr",
+                    "studnr",
+                    "lecturenr",
+                    "lecturenr",
+                    "persnr",
+                    "persnr",
+                    "grade",
+                    "grade"
+                ]
+            }
+        },
+        {
+            "name": "Unnesting",
+            "plan": {
+                "plan": {
+                    "operator": "select",
+                    "operatorId": 1,
+                    "input": {
+                        "operator": "select",
+                        "operatorId": 2,
+                        "input": {
+                            "operator": "leftmarkjoin",
+                            "operatorId": 3,
+                            "left": {
+                                "operator": "tablescan",
+                                "operatorId": 4,
+                                "segment": 6,
+                                "from": "test",
+                                "values": [
+                                    {
+                                        "name": "studnr",
+                                        "iu": [
+                                            "studnr",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "lecturenr",
+                                        "iu": [
+                                            "lecturenr",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "persnr",
+                                        "iu": [
+                                            "persnr",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "iu": [
+                                            "grade",
+                                            [
+                                                "Numeric",
+                                                2,
+                                                1
+                                            ]
+                                        ]
+                                    }
+                                ],
+                                "tid": [
+                                    "v",
+                                    [
+                                        "BigInt"
+                                    ]
+                                ],
+                                "tableOid": [
+                                    "v2",
+                                    [
+                                        "RegClass"
+                                    ]
+                                ],
+                                "tupleFlags": [
+                                    "v3",
+                                    [
+                                        "BigInt"
+                                    ]
+                                ],
+                                "restrictions": []
+                            },
+                            "right": {
+                                "operator": "tablescan",
+                                "operatorId": 5,
+                                "segment": 1,
+                                "from": "students",
+                                "values": [
+                                    {
+                                        "name": "studnr",
+                                        "iu": [
+                                            "studnr2",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "name",
+                                        "iu": [
+                                            "name",
+                                            [
+                                                "Varchar",
+                                                30
+                                            ]
+                                        ]
+                                    },
+                                    {
+                                        "name": "semester",
+                                        "iu": [
+                                            "semester",
+                                            [
+                                                "Integer"
+                                            ]
+                                        ]
+                                    }
+                                ],
+                                "tid": [
+                                    "v4",
+                                    [
+                                        "BigInt"
+                                    ]
+                                ],
+                                "tableOid": [
+                                    "v5",
+                                    [
+                                        "RegClass"
+                                    ]
+                                ],
+                                "tupleFlags": [
+                                    "v6",
+                                    [
+                                        "BigInt"
+                                    ]
+                                ],
+                                "restrictions": []
+                            },
+                            "condition": {
+                                "expression": "and",
+                                "arguments": [
+                                    {
+                                        "expression": "const",
+                                        "value": {
+                                            "type": [
+                                                "Bool"
+                                            ],
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "expression": "const",
+                                        "value": {
+                                            "type": [
+                                                "Bool"
+                                            ],
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "expression": "comparison",
+                                        "mode": "=",
+                                        "left": {
+                                            "expression": "iuref",
+                                            "iu": "studnr2"
+                                        },
+                                        "right": {
+                                            "expression": "iuref",
+                                            "iu": "studnr"
+                                        }
+                                    }
+                                ]
+                            },
+                            "marker": [
+                                "v7",
+                                [
+                                    "Bool"
+                                ]
+                            ]
+                        },
+                        "condition": {
+                            "expression": "iuref",
+                            "iu": "v7"
+                        }
+                    },
+                    "condition": {
+                        "expression": "const",
+                        "value": {
+                            "type": [
+                                "Bool"
+                            ],
+                            "value": true
+                        }
+                    }
+                },
+                "header": [
+                    "studnr",
+                    "studnr",
+                    "lecturenr",
+                    "lecturenr",
+                    "persnr",
+                    "persnr",
+                    "grade",
+                    "grade"
+                ]
+            }
+        },
+        {
+            "name": "Predicate Pushdown",
+            "plan": {
+                "plan": {
+                    "operator": "leftsemijoin",
+                    "operatorId": 1,
+                    "left": {
+                        "operator": "tablescan",
+                        "operatorId": 2,
+                        "segment": 6,
+                        "from": "test",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "lecturenr",
+                                "iu": [
+                                    "lecturenr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "persnr",
+                                "iu": [
+                                    "persnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "grade",
+                                "iu": [
+                                    "grade",
+                                    [
+                                        "Numeric",
+                                        2,
+                                        1
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v2",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v3",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "right": {
+                        "operator": "tablescan",
+                        "operatorId": 3,
+                        "segment": 1,
+                        "from": "students",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr2",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "name",
+                                "iu": [
+                                    "name",
+                                    [
+                                        "Varchar",
+                                        30
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "semester",
+                                "iu": [
+                                    "semester",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v4",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v5",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v6",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "condition": {
+                        "expression": "comparison",
+                        "mode": "=",
+                        "left": {
+                            "expression": "iuref",
+                            "iu": "studnr2"
+                        },
+                        "right": {
+                            "expression": "iuref",
+                            "iu": "studnr"
+                        }
+                    }
+                },
+                "header": [
+                    "studnr",
+                    "studnr",
+                    "lecturenr",
+                    "lecturenr",
+                    "persnr",
+                    "persnr",
+                    "grade",
+                    "grade"
+                ]
+            }
+        },
+        {
+            "name": "Operator Reordering",
+            "plan": {
+                "plan": {
+                    "operator": "leftsemijoin",
+                    "operatorId": 1,
+                    "cardinality": 3,
+                    "left": {
+                        "operator": "tablescan",
+                        "operatorId": 2,
+                        "cardinality": 3,
+                        "segment": 6,
+                        "from": "test",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "lecturenr",
+                                "iu": [
+                                    "lecturenr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "persnr",
+                                "iu": [
+                                    "persnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "grade",
+                                "iu": [
+                                    "grade",
+                                    [
+                                        "Numeric",
+                                        2,
+                                        1
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v2",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v3",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "right": {
+                        "operator": "tablescan",
+                        "operatorId": 3,
+                        "cardinality": 8,
+                        "segment": 1,
+                        "from": "students",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr2",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "name",
+                                "iu": [
+                                    "name",
+                                    [
+                                        "Varchar",
+                                        30
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "semester",
+                                "iu": [
+                                    "semester",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v4",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v5",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v6",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "condition": {
+                        "expression": "comparison",
+                        "mode": "=",
+                        "left": {
+                            "expression": "iuref",
+                            "iu": "studnr2"
+                        },
+                        "right": {
+                            "expression": "iuref",
+                            "iu": "studnr"
+                        }
+                    }
+                },
+                "header": [
+                    "studnr",
+                    "studnr",
+                    "lecturenr",
+                    "lecturenr",
+                    "persnr",
+                    "persnr",
+                    "grade",
+                    "grade"
+                ]
+            }
+        },
+        {
+            "name": "Physical Operator Mapping",
+            "plan": {
+                "plan": {
+                    "operator": "leftsemijoin",
+                    "operatorId": 1,
+                    "cardinality": 3,
+                    "method": "indexnl",
+                    "left": {
+                        "operator": "tablescan",
+                        "operatorId": 2,
+                        "cardinality": 3,
+                        "segment": 6,
+                        "from": "test",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "lecturenr",
+                                "iu": [
+                                    "lecturenr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "persnr",
+                                "iu": [
+                                    "persnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "grade",
+                                "iu": [
+                                    "grade",
+                                    [
+                                        "Numeric",
+                                        2,
+                                        1
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v2",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v3",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "right": {
+                        "operator": "tablescan",
+                        "operatorId": 3,
+                        "cardinality": 8,
+                        "segment": 1,
+                        "from": "students",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr2",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "name",
+                                "iu": [
+                                    "name",
+                                    [
+                                        "Varchar",
+                                        30
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "semester",
+                                "iu": [
+                                    "semester",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v4",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v5",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v6",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "condition": {
+                        "expression": "comparison",
+                        "mode": "=",
+                        "left": {
+                            "expression": "iuref",
+                            "iu": "studnr2"
+                        },
+                        "right": {
+                            "expression": "iuref",
+                            "iu": "studnr"
+                        }
+                    }
+                },
+                "header": [
+                    "studnr",
+                    "studnr",
+                    "lecturenr",
+                    "lecturenr",
+                    "persnr",
+                    "persnr",
+                    "grade",
+                    "grade"
+                ]
+            }
+        },
+        {
+            "name": "Optimized Plan",
+            "plan": {
+                "plan": {
+                    "operator": "leftsemijoin",
+                    "operatorId": 1,
+                    "cardinality": 3,
+                    "method": "indexnl",
+                    "left": {
+                        "operator": "tablescan",
+                        "operatorId": 2,
+                        "cardinality": 3,
+                        "segment": 6,
+                        "from": "test",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "lecturenr",
+                                "iu": [
+                                    "lecturenr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "persnr",
+                                "iu": [
+                                    "persnr",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "grade",
+                                "iu": [
+                                    "grade",
+                                    [
+                                        "Numeric",
+                                        2,
+                                        1
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v2",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v3",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "right": {
+                        "operator": "tablescan",
+                        "operatorId": 3,
+                        "cardinality": 8,
+                        "segment": 1,
+                        "from": "students",
+                        "values": [
+                            {
+                                "name": "studnr",
+                                "iu": [
+                                    "studnr2",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "name",
+                                "iu": [
+                                    "name",
+                                    [
+                                        "Varchar",
+                                        30
+                                    ]
+                                ]
+                            },
+                            {
+                                "name": "semester",
+                                "iu": [
+                                    "semester",
+                                    [
+                                        "Integer"
+                                    ]
+                                ]
+                            }
+                        ],
+                        "tid": [
+                            "v4",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "tableOid": [
+                            "v5",
+                            [
+                                "RegClass"
+                            ]
+                        ],
+                        "tupleFlags": [
+                            "v6",
+                            [
+                                "BigInt"
+                            ]
+                        ],
+                        "restrictions": []
+                    },
+                    "condition": {
+                        "expression": "comparison",
+                        "mode": "=",
+                        "left": {
+                            "expression": "iuref",
+                            "iu": "studnr2"
+                        },
+                        "right": {
+                            "expression": "iuref",
+                            "iu": "studnr"
+                        }
+                    }
+                },
+                "header": [
+                    "studnr",
+                    "studnr",
+                    "lecturenr",
+                    "lecturenr",
+                    "persnr",
+                    "persnr",
+                    "grade",
+                    "grade"
+                ]
+            }
+        }
+    ]
+}

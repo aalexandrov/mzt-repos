@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label=" Get decorrelation.public.students (u104)\l Project (#0, #1)\l"]
+    node1 [shape = record, label=" Get decorrelation.public.test (u112)\l Project (#0)\l Distinct group=(#0)\l ArrangeBy (#0)\l"]
+    node2 [shape = record, label=" Join %0 %1 (= #0 #2)\l  implementation = Differential %0 %1.(#0)\l Project (#1)\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}
