@@ -1,0 +1,12 @@
+digraph G {
+    node0 [shape = record, label="Let l0 =\l Get issue_10800.public.t1 (u87)\l  types = (integer?, integer?)\l  keys = ()\l Project ()\l  types = ()\l  keys = ()\l Reduce group=()\l  agg count(true)\l  types = (bigint)\l  keys = (())\l"]
+    node1 [shape = record, label=" Get %0 (l0)\l  types = (bigint)\l  keys = (())\l Project ()\l  types = ()\l  keys = (())\l Negate\l  types = ()\l  keys = ()\l"]
+    node2 [shape = record, label=" Constant ()\l  types = ()\l  keys = (())\l"]
+    node3 [shape = record, label=" Union %1 %2\l  types = ()\l  keys = ()\l Map 0\l  types = (bigint)\l  keys = ()\l"]
+    node4 [shape = record, label=" Union %0 %3\l  types = (bigint)\l  keys = ()\l"]
+    node0 -> node4 [label = "%0\l"]
+    node1 -> node3 [label = "%1\l"]
+    node0 -> node1 [label = "%0\l"]
+    node3 -> node4 [label = "%3\l"]
+    node2 -> node3 [label = "%2\l"]
+}

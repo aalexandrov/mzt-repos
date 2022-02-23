@@ -1,0 +1,39 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>1fd02cdc</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  COUNT(*)
+FROM
+  t1</sql>
+  </query>
+  <query>
+    <id>ff015af1</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  COUNT(*)
+FROM
+  t1
+GROUP BY
+  f2</sql>
+  </query>
+  <query>
+    <id>9547e1fc</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  COUNT(*)
+FROM
+  t1</sql>
+  </query>
+  <query>
+    <id>96d19983</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  COUNT(*)
+FROM
+  t1
+GROUP BY
+  f2</sql>
+  </query>
+</queries>
