@@ -1,0 +1,43 @@
+digraph G {
+    compound = true
+    labeljust = l
+    label = ""
+    node [ shape = box ]
+    subgraph cluster3 {
+        label = "Box3:Select"
+        boxhead3 [ shape = record, label = "{ Distinct: Preserve| 0: integer? (Q2.C0)| 1: integer (Q2.C1)| 2: text (Q2.C2)| 3: numeric (Q2.C3)| 4: date (Q2.C4)| 5: text (Q2.C5)| 6: text (Q2.C6)| 7: integer (Q2.C7)| 8: text (Q2.C8)| 9: integer? (Q2.C9)| 10: text (Q2.C10)| 11: text (Q2.C11)| 12: integer (Q2.C12)| 13: text (Q2.C13)| 14: numeric (Q2.C14)| 15: text (Q2.C15)| 16: text (Q2.C16)| (((Q2.C14 + Q2.C3) = i32tonumeric(123)) && (Q2.C14 = Q2.C3)) }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q2 [ label = "Q2(F)" ]
+        }
+    }
+    subgraph cluster0 {
+        label = "Box0:Select"
+        boxhead0 [ shape = record, label = "{ Distinct: Preserve| 0: integer? (Q0.C0)| 1: integer (Q0.C1)| 2: text (Q0.C2)| 3: numeric (Q0.C3)| 4: date (Q0.C4)| 5: text (Q0.C5)| 6: text (Q0.C6)| 7: integer (Q0.C7)| 8: text (Q0.C8)| 9: integer? (Q1.C0)| 10: text (Q1.C1)| 11: text (Q1.C2)| 12: integer (Q1.C3)| 13: text (Q1.C4)| 14: numeric (Q1.C5)| 15: text (Q1.C6)| 16: text (Q1.C7)| true }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q0 [ label = "Q0(F)" ]
+            Q1 [ label = "Q1(F)" ]
+        }
+    }
+    subgraph cluster1 {
+        label = "Box1:Get"
+        boxhead1 [ shape = record, label = "{ Distinct: Preserve| 0: integer? (C0)| 1: integer (C1)| 2: text (C2)| 3: numeric (C3)| 4: date (C4)| 5: text (C5)| 6: text (C6)| 7: integer (C7)| 8: text (C8) }" ]
+        {
+            rank = same
+        }
+    }
+    subgraph cluster2 {
+        label = "Box2:Get"
+        boxhead2 [ shape = record, label = "{ Distinct: Preserve| 0: integer? (C0)| 1: text (C1)| 2: text (C2)| 3: integer (C3)| 4: text (C4)| 5: numeric (C5)| 6: text (C6)| 7: text (C7) }" ]
+        {
+            rank = same
+        }
+    }
+    edge [ arrowhead = none, style = dashed ]
+    Q2 -> boxhead0 [ lhead = cluster0 ]
+    Q0 -> boxhead1 [ lhead = cluster1 ]
+    Q1 -> boxhead2 [ lhead = cluster2 ]
+}

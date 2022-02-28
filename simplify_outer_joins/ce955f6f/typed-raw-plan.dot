@@ -1,6 +1,6 @@
 digraph G {
-    node0 [shape = record, label=" Get simplify_outer_joins.public.l (u89)\l  types = (integer?, integer?)\l  keys = ()\l"]
-    node1 [shape = record, label=" Get simplify_outer_joins.public.r (u91)\l  types = (integer?, integer)\l  keys = ()\l"]
+    node0 [shape = record, label=" Get simplify_outer_joins.public.l (u95)\l  types = (integer?, integer?)\l  keys = ()\l"]
+    node1 [shape = record, label=" Get simplify_outer_joins.public.r (u97)\l  types = (integer?, integer)\l  keys = ()\l"]
     node2 [shape = record, label=" FullOuterJoin %0 %1 on (#1 = #2)\l  types = (integer?, integer?, integer?, integer?)\l  keys = ()\l"]
     node0 -> node2 [label = "%0\l"]
     node1 -> node2 [label = "%1\l"]

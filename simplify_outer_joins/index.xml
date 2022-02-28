@@ -11,9 +11,22 @@ WHERE
   L.x &gt; R.z</sql>
   </query>
   <query>
-    <id>908b6c48</id>
-    <sql>SELECT
-  'qgm(true)' as qgm, *
+    <id>7bc81729</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  *
+FROM
+  table_f4_f5
+  RIGHT JOIN table_f5_f6 USING (f5)
+WHERE
+  TRUE AND
+  f5 = f4</sql>
+  </query>
+  <query>
+    <id>923e0acb</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
 FROM
   t1 a1
   LEFT JOIN t1 a2 ON TRUE AND a1.f1 = a2.f1
@@ -26,32 +39,6 @@ WHERE
   a2.f2 = 5</sql>
   </query>
   <query>
-    <id>8a97e0fc</id>
-    <sql>SELECT
-  'qgm(true)' as qgm,
-  L.x,
-  L.y,
-  R.y,
-  R.z,
-  T.a
-FROM
-  L FULL OUTER JOIN R ON L.y = R.y
-    LEFT OUTER JOIN T ON L.y = T.a
-WHERE
-  L.x &gt; R.z</sql>
-  </query>
-  <query>
-    <id>3b3cf54f</id>
-    <sql>SELECT
-  'qgm(true)' as qgm, *
-FROM
-  table_f4_f5
-  RIGHT JOIN table_f5_f6 USING (f5)
-WHERE
-  TRUE AND
-  f5 = f4</sql>
-  </query>
-  <query>
     <id>808ae74b</id>
     <sql>SELECT
   L.x, L.y, R.y, R.z
@@ -59,15 +46,16 @@ FROM
   L LEFT OUTER JOIN R ON TRUE</sql>
   </query>
   <query>
-    <id>ee613584</id>
-    <sql>SELECT
-  'qgm(true)' as qgm, *
+    <id>ab8852bc</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  *
 FROM
-  orders 
-  FULL OUTER JOIN customer ON ( c_acctbal = o_totalprice )
+  table_f1_f2_f3
+  LEFT JOIN (table_f3_f4_f5 RIGHT JOIN table_f5_f6 USING (f5)) USING (f3)
 WHERE
-  c_acctbal + o_totalprice = 123 AND
-  c_acctbal = o_totalprice</sql>
+  TRUE AND
+  f5 = 0</sql>
   </query>
   <query>
     <id>81076199</id>
@@ -86,9 +74,10 @@ FROM
   L LEFT OUTER JOIN R ON L.y = R.y</sql>
   </query>
   <query>
-    <id>20085243</id>
-    <sql>SELECT
-  'qgm(false)' as qgm, *
+    <id>5cd31a8b</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
 FROM
   table_f4_f5
   RIGHT JOIN table_f5_f6 USING (f5)
@@ -97,24 +86,10 @@ WHERE
   f5 = f4</sql>
   </query>
   <query>
-    <id>3361127f</id>
-    <sql>SELECT
-  "qgm(true)" as qgm, *
-FROM
-  t1 a1
-  LEFT JOIN t1 a2 ON TRUE AND a1.f1 = a2.f1
-  LEFT JOIN t2 ON TRUE
-WHERE
-  a1.f1 = a2.f1 AND
-  a2.f2 = a1.f1 AND
-  a2.f1 = a1.f2 AND
-  a2.f1 &lt; a1.f2 AND
-  a2.f2 = 5</sql>
-  </query>
-  <query>
-    <id>9800fb7a</id>
-    <sql>SELECT
-  'qgm(false)' as qgm, *
+    <id>e5e93a91</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
 FROM
   table_f1_f2_f3
   LEFT JOIN (table_f3_f4_f5 RIGHT JOIN table_f5_f6 USING (f5)) USING (f3)
@@ -123,40 +98,45 @@ WHERE
   f5 = 0</sql>
   </query>
   <query>
-    <id>2a9a82be</id>
-    <sql>SELECT
-    'qgm(true)' as qgm, L.x, L.y, R.y, R.z, T.a
+    <id>4ff59312</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  *
 FROM
-    L FULL OUTER JOIN R ON L.y = R.y
-      LEFT OUTER JOIN T ON L.y = T.a
-WHERE
-    L.x &gt; R.z</sql>
-  </query>
-  <query>
-    <id>1a1968bb</id>
-    <sql>SELECT
-  'qgm(false)' as qgm, *
-FROM
-  orders 
-  FULL OUTER JOIN customer ON ( c_acctbal = o_totalprice )
+  tpch.public.orders 
+  INNER JOIN tpch.public.customer ON ( c_acctbal = o_totalprice )
 WHERE
   c_acctbal + o_totalprice = 123 AND
   c_acctbal = o_totalprice</sql>
   </query>
   <query>
-    <id>f174fd28</id>
-    <sql>SELECT
-    'qgm(false)' as qgm, L.x, L.y, R.y, R.z, T.a
+    <id>ca7da0f0</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
 FROM
-    L FULL OUTER JOIN R ON L.y = R.y
-      LEFT OUTER JOIN T ON L.y = T.a
+  tpch.public.orders 
+  FULL OUTER JOIN tpch.public.customer ON ( c_acctbal = o_totalprice )
 WHERE
-    L.x &gt; R.z</sql>
+  c_acctbal + o_totalprice = 123 AND
+  c_acctbal = o_totalprice</sql>
   </query>
   <query>
-    <id>b93adbb7</id>
-    <sql>SELECT
-  'qgm(false)' as qgm, *
+    <id>d4abe593</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  L.x, L.y, R.y, R.z, T.a
+FROM
+  L FULL OUTER JOIN R ON L.y = R.y
+    LEFT OUTER JOIN T ON L.y = T.a
+WHERE
+  L.x &gt; R.z</sql>
+  </query>
+  <query>
+    <id>662a58f5</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  *
 FROM
   t1 a1
   LEFT JOIN t1 a2 ON TRUE AND a1.f1 = a2.f1
@@ -167,13 +147,6 @@ WHERE
   a2.f1 = a1.f2 AND
   a2.f1 &lt; a1.f2 AND
   a2.f2 = 5</sql>
-  </query>
-  <query>
-    <id>a7cdcf86</id>
-    <sql>SELECT
-  L.x, L.y, R.y, R.z, T.a
-FROM
-  L LEFT OUTER JOIN R ON L.y = R.y</sql>
   </query>
   <query>
     <id>ce955f6f</id>
@@ -181,17 +154,6 @@ FROM
   L.x, L.y, R.y, R.z
 FROM
   L FULL OUTER JOIN R ON L.y = R.y</sql>
-  </query>
-  <query>
-    <id>82cc3326</id>
-    <sql>SELECT
-  'qgm(true)' as qgm, *
-FROM
-  table_f1_f2_f3
-  LEFT JOIN (table_f3_f4_f5 RIGHT JOIN table_f5_f6 USING (f5)) USING (f3)
-WHERE
-  TRUE AND
-  f5 = 0</sql>
   </query>
   <query>
     <id>94858040</id>
@@ -203,23 +165,40 @@ WHERE
     L.x &lt; 42</sql>
   </query>
   <query>
-    <id>637203ce</id>
-    <sql>SELECT
-  'qgm(false)' as qgm, *
+    <id>af34cd52</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  *
 FROM
-  orders, 
-  customer
+  tpch.public.orders, 
+  tpch.public.customer
 WHERE
   c_acctbal + o_totalprice = 123 AND
   c_acctbal = o_totalprice</sql>
   </query>
   <query>
-    <id>34b05d9a</id>
-    <sql>SELECT
-  'qgm(false)' as qgm, *
+    <id>eb3f7728</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  L.x,
+  L.y,
+  R.y,
+  R.z,
+  T.a
 FROM
-  orders 
-  INNER JOIN customer ON ( c_acctbal = o_totalprice )
+  L FULL OUTER JOIN R ON L.y = R.y
+    LEFT OUTER JOIN T ON L.y = T.a
+WHERE
+  L.x &gt; R.z</sql>
+  </query>
+  <query>
+    <id>6a4d43de</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT
+  *
+FROM
+  tpch.public.orders 
+  FULL OUTER JOIN tpch.public.customer ON ( c_acctbal = o_totalprice )
 WHERE
   c_acctbal + o_totalprice = 123 AND
   c_acctbal = o_totalprice</sql>

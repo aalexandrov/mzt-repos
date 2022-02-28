@@ -1,0 +1,14 @@
+digraph G {
+    node0 [shape = record, label="Let l0 =\l Constant ()\l"]
+    node1 [shape = record, label=" Get tpch.public.orders (u68)\l"]
+    node2 [shape = record, label=" Join %0 %1\l  implementation = Unimplemented\l"]
+    node3 [shape = record, label=" Get tpch.public.customer (u64)\l"]
+    node4 [shape = record, label=" Join %0 %3\l  implementation = Unimplemented\l"]
+    node5 [shape = record, label=" Join %2 %4\l  implementation = Unimplemented\l Project (#0..=#16)\l Filter (#14 = #3)\l Project (#0..=#16)\l Filter (((#14 + #3) = i32tonumeric(123)) && (#14 = #3))\l Project (#0..=#16)\l"]
+    node0 -> node2 [label = "%0\l"]
+    node2 -> node5 [label = "%2\l"]
+    node1 -> node2 [label = "%1\l"]
+    node4 -> node5 [label = "%4\l"]
+    node3 -> node4 [label = "%3\l"]
+    node0 -> node4 [label = "%0\l"]
+}

@@ -233,7 +233,7 @@ WHERE
 
 where the resulting optimized plan still contains two `FULL OUTER JOIN` subgraphs, even though the predicate in the `WHERE` clause is enough to simplify the first one to an `INNER JOIN`.
 
-<img src="f174fd28/optimized-plan.svg" alt="Q5-optimized-plan" style="width: 75%" />
+<img src="009ff9dc/optimized-plan.svg" alt="Q5-optimized-plan" style="width: 75%" />
 
 Unfortunately, this pattern has alerady been seein multiple times in customer issues [product/issues/135](https://github.com/MaterializeInc/product/issues/135), [materialize/issues/6987](https://github.com/MaterializeInc/materialize/issues/6987).
 
@@ -255,14 +255,14 @@ and is already able to produce the desired result for `Q5`:
 <table>
   <thead>
   <tr>
-    <td><img src="2a9a82be/query-graph.svg" alt="Q5-qgm-query-graph" style="width: 100%" /></td>
-    <td><img src="2a9a82be/optimized-query-graph.svg" alt="Q5-qgm-optimized-query-graph" style="width: 100%" /></td>
+    <td><img src="d4abe593/query-graph.svg" alt="Q5-qgm-query-graph" style="width: 100%" /></td>
+    <td><img src="d4abe593/optimized-query-graph.svg" alt="Q5-qgm-optimized-query-graph" style="width: 100%" /></td>
   </tr>
   </thead>
 </table>
 
 
-<img src="2a9a82be/optimized-plan.svg" alt="Q5-qgm-optimized-plan" style="width: 75%" />
+<img src="d4abe593/optimized-plan.svg" alt="Q5-qgm-optimized-plan" style="width: 75%" />
 
 ## Appendix
 ### SQL Environment

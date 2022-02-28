@@ -1,0 +1,14 @@
+digraph G {
+    node0 [shape = record, label="Let l0 =\l Constant ()\l  types = ()\l  keys = (())\l"]
+    node1 [shape = record, label=" Get tpch.public.orders (u68)\l  types = (integer?, integer, text, numeric, date, text, text, integer, text)\l  keys = ()\l"]
+    node2 [shape = record, label=" Join %0 %1\l  implementation = Unimplemented\l  types = (integer?, integer, text, numeric, date, text, text, integer, text)\l  keys = ()\l"]
+    node3 [shape = record, label=" Get tpch.public.customer (u64)\l  types = (integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l"]
+    node4 [shape = record, label=" Join %0 %3\l  implementation = Unimplemented\l  types = (integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l"]
+    node5 [shape = record, label=" Join %2 %4\l  implementation = Unimplemented\l  types = (integer?, integer, text, numeric, date, text, text, integer, text, integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l Project (#0..=#16)\l  types = (integer?, integer, text, numeric, date, text, text, integer, text, integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l Filter (#14 = #3)\l  types = (integer?, integer, text, numeric, date, text, text, integer, text, integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l Project (#0..=#16)\l  types = (integer?, integer, text, numeric, date, text, text, integer, text, integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l Filter (((#14 + #3) = i32tonumeric(123)) && (#14 = #3))\l  types = (integer?, integer, text, numeric, date, text, text, integer, text, integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l Project (#0..=#16)\l  types = (integer?, integer, text, numeric, date, text, text, integer, text, integer?, text, text, integer, text, numeric, text, text)\l  keys = ()\l"]
+    node0 -> node2 [label = "%0\l"]
+    node2 -> node5 [label = "%2\l"]
+    node1 -> node2 [label = "%1\l"]
+    node4 -> node5 [label = "%4\l"]
+    node3 -> node4 [label = "%3\l"]
+    node0 -> node4 [label = "%0\l"]
+}

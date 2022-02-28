@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>node0</title>
 <polygon fill="none" stroke="black" points="0,-562.5 0,-615.5 288,-615.5 288,-562.5 0,-562.5"/>
-<text text-anchor="start" x="8" y="-600.3" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.l (u79)</text>
+<text text-anchor="start" x="8" y="-600.3" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.l (u95)</text>
 <text text-anchor="start" x="8" y="-585.3" font-family="Times,serif" font-size="14.00"> Filter !(isnull(#1))</text>
 <text text-anchor="start" x="8" y="-570.3" font-family="Times,serif" font-size="14.00"> ArrangeBy (#1)</text>
 </g>
@@ -27,7 +27,7 @@
 <text text-anchor="start" x="142" y="-450.3" font-family="Times,serif" font-size="14.00"> Project (#0, #1, #3)</text>
 </g>
 <!-- node0&#45;&gt;node2 -->
-<g id="edge8" class="edge">
+<g id="edge1" class="edge">
 <title>node0&#45;&gt;node2</title>
 <path fill="none" stroke="black" d="M179.49,-562.37C198.35,-548.75 221.93,-531.72 243.01,-516.5"/>
 <polygon fill="black" stroke="black" points="245.19,-519.23 251.25,-510.54 241.09,-513.56 245.19,-519.23"/>
@@ -37,11 +37,11 @@
 <g id="node2" class="node">
 <title>node1</title>
 <polygon fill="none" stroke="black" points="306,-570 306,-608 596,-608 596,-570 306,-570"/>
-<text text-anchor="start" x="314" y="-592.8" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.r (u81)</text>
+<text text-anchor="start" x="314" y="-592.8" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.r (u97)</text>
 <text text-anchor="start" x="314" y="-577.8" font-family="Times,serif" font-size="14.00"> Filter !(isnull(#0))</text>
 </g>
 <!-- node1&#45;&gt;node2 -->
-<g id="edge5" class="edge">
+<g id="edge8" class="edge">
 <title>node1&#45;&gt;node2</title>
 <path fill="none" stroke="black" d="M425.57,-569.75C405.46,-555.32 376.67,-534.66 351.42,-516.55"/>
 <polygon fill="black" stroke="black" points="353.18,-513.5 343.02,-510.52 349.1,-519.19 353.18,-513.5"/>
@@ -57,7 +57,7 @@
 <text text-anchor="start" x="636.5" y="-330.3" font-family="Times,serif" font-size="14.00"> ArrangeBy (#0)</text>
 </g>
 <!-- node2&#45;&gt;node4 -->
-<g id="edge10" class="edge">
+<g id="edge4" class="edge">
 <title>node2&#45;&gt;node4</title>
 <path fill="none" stroke="black" d="M433.68,-442.5C488.53,-428.55 552.4,-411.42 618.67,-391.02"/>
 <polygon fill="black" stroke="black" points="619.95,-394.29 628.47,-387.99 617.88,-387.6 619.95,-394.29"/>
@@ -71,7 +71,7 @@
 <text text-anchor="start" x="163" y="-273.3" font-family="Times,serif" font-size="14.00"> Project (#0, #1, #1, #2)</text>
 </g>
 <!-- node2&#45;&gt;node8 -->
-<g id="edge6" class="edge">
+<g id="edge9" class="edge">
 <title>node2&#45;&gt;node8</title>
 <path fill="none" stroke="black" d="M289.51,-442.4C281.25,-405.89 268.09,-347.75 260.32,-313.44"/>
 <polygon fill="black" stroke="black" points="263.72,-312.59 258.1,-303.61 256.89,-314.13 263.72,-312.59"/>
@@ -81,7 +81,7 @@
 <g id="node4" class="node">
 <title>node3</title>
 <polygon fill="none" stroke="black" points="322,-338.5 322,-374.5 610,-374.5 610,-338.5 322,-338.5"/>
-<text text-anchor="start" x="330" y="-352.8" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.l (u79)</text>
+<text text-anchor="start" x="330" y="-352.8" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.l (u95)</text>
 </g>
 <!-- node5 -->
 <g id="node6" class="node">
@@ -93,14 +93,14 @@
 <text text-anchor="start" x="557" y="-186.3" font-family="Times,serif" font-size="14.00"> Negate</text>
 </g>
 <!-- node3&#45;&gt;node5 -->
-<g id="edge3" class="edge">
+<g id="edge2" class="edge">
 <title>node3&#45;&gt;node5</title>
 <path fill="none" stroke="black" d="M495.67,-338.37C532.61,-317.05 596.77,-280.01 645.66,-251.79"/>
 <polygon fill="black" stroke="black" points="647.69,-254.66 654.6,-246.63 644.19,-248.6 647.69,-254.66"/>
 <text text-anchor="start" x="618" y="-280.8" font-family="Times,serif" font-size="14.00">%3</text>
 </g>
 <!-- node4&#45;&gt;node5 -->
-<g id="edge9" class="edge">
+<g id="edge7" class="edge">
 <title>node4&#45;&gt;node5</title>
 <path fill="none" stroke="black" d="M712,-322.21C712,-302.71 712,-277.87 712,-256.86"/>
 <polygon fill="black" stroke="black" points="715.5,-256.58 712,-246.58 708.5,-256.58 715.5,-256.58"/>
@@ -114,7 +114,7 @@
 <text text-anchor="start" x="335" y="-96.3" font-family="Times,serif" font-size="14.00"> Map null, null</text>
 </g>
 <!-- node5&#45;&gt;node7 -->
-<g id="edge7" class="edge">
+<g id="edge5" class="edge">
 <title>node5&#45;&gt;node7</title>
 <path fill="none" stroke="black" d="M607.83,-178.49C557.42,-162.51 498.39,-143.8 454.05,-129.75"/>
 <polygon fill="black" stroke="black" points="454.84,-126.33 444.25,-126.64 452.72,-133 454.84,-126.33"/>
@@ -124,10 +124,10 @@
 <g id="node7" class="node">
 <title>node6</title>
 <polygon fill="none" stroke="black" points="243,-194.5 243,-230.5 531,-230.5 531,-194.5 243,-194.5"/>
-<text text-anchor="start" x="251" y="-208.8" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.l (u79)</text>
+<text text-anchor="start" x="251" y="-208.8" font-family="Times,serif" font-size="14.00">Get simplify_outer_joins.public.l (u95)</text>
 </g>
 <!-- node6&#45;&gt;node7 -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>node6&#45;&gt;node7</title>
 <path fill="none" stroke="black" d="M387,-194.49C387,-178.82 387,-155.28 387,-136.78"/>
 <polygon fill="black" stroke="black" points="390.5,-136.57 387,-126.57 383.5,-136.57 390.5,-136.57"/>
@@ -140,14 +140,14 @@
 <text text-anchor="start" x="182.5" y="-14.8" font-family="Times,serif" font-size="14.00">Union %7 %8</text>
 </g>
 <!-- node7&#45;&gt;node9 -->
-<g id="edge1" class="edge">
+<g id="edge6" class="edge">
 <title>node7&#45;&gt;node9</title>
 <path fill="none" stroke="black" d="M354.68,-88.47C330.25,-74.85 296.59,-56.08 270.55,-41.56"/>
 <polygon fill="black" stroke="black" points="272.13,-38.43 261.69,-36.62 268.72,-44.54 272.13,-38.43"/>
 <text text-anchor="start" x="319" y="-58.8" font-family="Times,serif" font-size="14.00">%7</text>
 </g>
 <!-- node8&#45;&gt;node9 -->
-<g id="edge2" class="edge">
+<g id="edge10" class="edge">
 <title>node8&#45;&gt;node9</title>
 <path fill="none" stroke="black" d="M241.76,-265.3C238.62,-259.67 235.65,-253.29 234,-247 215.52,-176.74 222.04,-90.02 227.18,-46.75"/>
 <polygon fill="black" stroke="black" points="230.67,-47.08 228.44,-36.72 223.72,-46.2 230.67,-47.08"/>

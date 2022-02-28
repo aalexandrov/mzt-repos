@@ -1,3 +1,0 @@
-digraph G {
-    node0 [shape = record, label=" Constant\l  types = (text, double precision, double precision, double precision, double precision, double precision, double precision)\l  keys = (())\l"]
-}
