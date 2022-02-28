@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Get types.public.t1 (u139)\l  types = (integer?, integer)\l  keys = ()\l Project ()\l  types = ()\l  keys = ()\l Map (err: invalid input syntax for type bigint: invalid digit found in string: \"TRUE\")\l  types = (bigint)\l  keys = ()\l"]
+}

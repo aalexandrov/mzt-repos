@@ -1,0 +1,4 @@
+digraph G {
+    node0 [shape = record, label=" Get types.public.t2 (u141)\l Map select(%1)\l \l  %1 =\l   Get types.public.t1 (u139)\l   Map 1\l   Project (#2)\l \l Project (#2)\l"]
+    node1 -> node0 [label = "%1\l"]
+}

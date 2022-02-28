@@ -1,0 +1,4 @@
+digraph G {
+    node0 [shape = record, label=" Get types.public.t2 (u141)\l  types = (integer?, integer?)\l  keys = ()\l Map select(%1)\l  types = (integer?, integer?, boolean?)\l  keys = ()\l \l  %1 =\l   Get types.public.t1 (u139)\l    types = (integer?, integer)\l    keys = ()\l   Project (#0)\l    types = (integer?)\l    keys = ()\l   Reduce group=() all(!(((#^0 = #0) && true)))\l    types = (boolean?)\l    keys = ()\l \l Project (#2)\l  types = (boolean?)\l  keys = ()\l"]
+    node1 -> node0 [label = "%1\l"]
+}

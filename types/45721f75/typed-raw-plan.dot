@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Get types.public.t1 (u139)\l  types = (integer?, integer)\l  keys = ()\l Reduce group=() min(#1)\l  types = (integer?)\l  keys = ()\l"]
+}

@@ -1,41 +1,28 @@
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <queries>
   <query>
-    <id>d34beb00</id>
-    <sql>SELECT
-    x,
-    y,
-    x + y,
-    x - y,
-    coalesce(x + y, x - y, x)
-FROM
-    U
-WHERE
-    x &gt; 0</sql>
+    <id>de1c528a</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT greatest( f2 , f2 ) FROM t1;</sql>
   </query>
   <query>
-    <id>0b35ca47</id>
-    <sql>SELECT
-    x,
-    y
-FROM
-    T
-WHERE
-    coalesce(x, y) &gt; 0</sql>
+    <id>8ce12633</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT CAST(CAST('TRUE' AS TEXT) AS BIGINT) FROM t1;</sql>
   </query>
   <query>
-    <id>a12c62c8</id>
-    <sql>SELECT
-    x,
-    y
-FROM
-    U
-WHERE
-    coalesce(x, y) &gt; 0</sql>
+    <id>94e01928</id>
+    <sql>SET qgm_optimizations_experimental = true; SELECT 1 IN ( 1 , NULL )</sql>
   </query>
   <query>
-    <id>03af3ee0</id>
-    <sql>SELECT
+    <id>5731c51a</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT MIN(f2) FROM t1 GROUP BY f1;</sql>
+  </query>
+  <query>
+    <id>1a258deb</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
     x,
     y,
     x + y,
@@ -45,21 +32,70 @@ FROM
     T</sql>
   </query>
   <query>
-    <id>f1508531</id>
-    <sql>SELECT
+    <id>b23194c8</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+    x,
+    y
+FROM
+    U
+WHERE
+    coalesce(x, y) &gt; 0</sql>
+  </query>
+  <query>
+    <id>53f015ae</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT NULLIF(f2 , NULL) FROM t1;</sql>
+  </query>
+  <query>
+    <id>9fe5b67a</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT ( SELECT 1 FROM t1 ) FROM t2;</sql>
+  </query>
+  <query>
+    <id>fcd6d4b1</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT MIN(f1) FROM t1 GROUP BY f2;</sql>
+  </query>
+  <query>
+    <id>efd64935</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT ( SELECT f2 FROM t1 WHERE f1 = 42 ) FROM t2;</sql>
+  </query>
+  <query>
+    <id>4b171d35</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+    x,
+    y
+FROM
+    T
+WHERE
+    coalesce(x, y) &gt; 0</sql>
+  </query>
+  <query>
+    <id>a6b01056</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT ( SELECT 1 FROM t1 ) FROM t2;</sql>
+  </query>
+  <query>
+    <id>05bbb543</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
     x,
     y,
     x + y,
     x - y,
     coalesce(x + y, x - y, x)
 FROM
-    T
+    U
 WHERE
     x &gt; 0</sql>
   </query>
   <query>
-    <id>37fc289b</id>
-    <sql>SELECT
+    <id>91be63d2</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
     x,
     y,
     x + y,
@@ -67,5 +103,25 @@ WHERE
     coalesce(x + y, x - y, y)
 FROM
     U</sql>
+  </query>
+  <query>
+    <id>e6fb27e8</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT EXISTS( SELECT f2 FROM t1 WHERE f1 = 42 ) FROM t2;</sql>
+  </query>
+  <query>
+    <id>dc94fec5</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT COALESCE(f2 , NULL) FROM t1;</sql>
+  </query>
+  <query>
+    <id>45721f75</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT MIN(f2) FROM t1;</sql>
+  </query>
+  <query>
+    <id>35002a9d</id>
+    <sql>SET qgm_optimizations_experimental = false;
+SELECT f1 NOT IN ( SELECT f1 FROM t1 ) FROM t2;</sql>
   </query>
 </queries>

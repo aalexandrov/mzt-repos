@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Constant ()\l Map ((false  (1 = 1))  (1 = null))\l"]
+}

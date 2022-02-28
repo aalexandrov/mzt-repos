@@ -1,0 +1,12 @@
+digraph G {
+    node0 [shape = record, label="Let l0 =\l Get types.public.t1 (u139)\l Project (#1)\l Reduce group=()\l  agg min(#0)\l"]
+    node1 [shape = record, label=" Get %0 (l0)\l Project ()\l Negate\l"]
+    node2 [shape = record, label=" Constant ()\l"]
+    node3 [shape = record, label=" Union %1 %2\l Map null\l"]
+    node4 [shape = record, label=" Union %0 %3\l"]
+    node0 -> node1 [label = "%0\l"]
+    node1 -> node3 [label = "%1\l"]
+    node2 -> node3 [label = "%2\l"]
+    node3 -> node4 [label = "%3\l"]
+    node0 -> node4 [label = "%0\l"]
+}

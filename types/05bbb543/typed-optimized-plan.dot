@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Get types.public.u (u129)\l  types = (integer?, integer)\l  keys = ()\l Filter (#0 \> 0)\l  types = (integer, integer)\l  keys = ()\l Map (#0 + #1), (#0 - #1)\l  types = (integer, integer, integer, integer)\l  keys = ()\l Project (#0..=#3, #2)\l  types = (integer, integer, integer, integer, integer)\l  keys = ()\l"]
+}

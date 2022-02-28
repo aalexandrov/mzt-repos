@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Constant (true)\l  types = (boolean)\l  keys = (())\l"]
+}

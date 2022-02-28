@@ -1,3 +1,0 @@
-digraph G {
-    node0 [shape = record, label=" Get types.public.t (u31)\l Map (#0 + #1), (#0 - #1), coalesce(#2, #3, #1)\l"]
-}

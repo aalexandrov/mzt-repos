@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label=" Get types.public.t1 (u139)\l  types = (integer?, integer)\l  keys = ()\l Map strtoi64(\"TRUE\")\l  types = (integer?, integer, bigint)\l  keys = ()\l Project (#2)\l  types = (bigint)\l  keys = ()\l"]
+}
