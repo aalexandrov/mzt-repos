@@ -1,0 +1,9 @@
+digraph G {
+    node0 [shape = record, label="Constant ()\l- types = ()\l- keys = (())\l"]
+    node1 [shape = record, label="Get issue_10871.public.t3 (u26)\l- types = (character varying?, text?)\l- keys = ()\l"]
+    node2 [shape = record, label="Join %0 %1\l- implementation = Unimplemented\l- types = (character varying?, text?)\l- keys = ()\l"]
+    node3 [shape = record, label="- types = (character varying?, text?)\l- keys = ()\lMap strtovarchar(varchartostr(#0))\l- types = (character varying?, text?, character varying?)\l- keys = ()\lMap varchartostr(strtovarchar(#1))\l- types = (character varying?, text?, character varying?, text?)\l- keys = ()\lProject (#0..=#3)\l- types = (character varying?, text?, character varying?, text?)\l- keys = ()\lProject (#2, #3)\l- types = (character varying?, text?)\l- keys = ()\l"]
+    node2 -> node3 [label = "%2\l"]
+    node0 -> node2 [label = "%0\l"]
+    node1 -> node2 [label = "%1\l"]
+}

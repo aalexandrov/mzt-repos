@@ -1,0 +1,47 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>fb0d6362</id>
+    <sql>SELECT
+  f1 = f1
+FROM
+  t3</sql>
+  </query>
+  <query>
+    <id>1507ea93</id>
+    <sql>SELECT
+  f1::string = f2
+FROM
+  t3</sql>
+  </query>
+  <query>
+    <id>17d39176</id>
+    <sql>SELECT
+  f1 = f2::varchar
+FROM
+  t3</sql>
+  </query>
+  <query>
+    <id>a51e3012</id>
+    <sql>SELECT
+  f1::string::varchar = f1,
+  f2::varchar::string = f2
+FROM
+  t3</sql>
+  </query>
+  <query>
+    <id>2e2c0ce7</id>
+    <sql>SELECT
+  f1 = f2
+FROM
+  t3</sql>
+  </query>
+  <query>
+    <id>49d88e99</id>
+    <sql>SELECT
+  f1::string::varchar,
+  f2::varchar::string
+FROM
+  t3</sql>
+  </query>
+</queries>

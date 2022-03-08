@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label="Get issue_10871.public.t3 (u26)\lMap (varchartostr(strtovarchar(varchartostr(#0))) = varchartostr(#0)), (varchartostr(strtovarchar(#1)) = #1)\lProject (#2, #3)\l"]
+}

@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label="Get issue_10871.public.t3 (u26)\l- types = (character varying?, text?)\l- keys = ()\lMap varchartostr(#0), (#2 = varchartostr(strtovarchar(#2))), (#1 = varchartostr(strtovarchar(#1)))\l- types = (character varying?, text?, text?, boolean?, boolean?)\l- keys = ()\lProject (#3, #4)\l- types = (boolean?, boolean?)\l- keys = ()\l"]
+}
