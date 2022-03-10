@@ -1,0 +1,4 @@
+digraph G {
+    node0 [shape = record, label="Constant ()\l- types = ()\l- keys = ()\lMap (null = select(%1))\l- types = (boolean?)\l- keys = ()\l-\l- %1 =\l- Get issue_9284.public.t1 (u31)\l- types = (bigint?, integer?)\l- keys = ()\l- Map true\l- types = (bigint?, integer?, boolean)\l- keys = ()\l- Project (#2)\l- types = (boolean)\l- keys = ()\l-\l"]
+    node1 -> node0 [label = "%1\l"]
+}

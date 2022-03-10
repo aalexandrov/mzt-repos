@@ -1,0 +1,15 @@
+digraph G {
+    node0 [shape = record, label="Get issue_9284.public.t1 (u31)\lProject ()\l"]
+    node1 [shape = record, label="Reduce group=()\l- agg count(true)\lFilter (#0 \> 1)\lProject ()\l"]
+    node2 [shape = record, label="Union %0 %1\l"]
+    node3 [shape = record, label="Distinct group=()\lNegate\l"]
+    node4 [shape = record, label="Constant ()\l"]
+    node5 [shape = record, label="Union %2 %3 %4\lMap null\l"]
+    node2 -> node5 [label = "%2\l"]
+    node0 -> node1 [label = "%0\l"]
+    node2 -> node3 [label = "%2\l"]
+    node4 -> node5 [label = "%4\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+    node3 -> node5 [label = "%3\l"]
+}

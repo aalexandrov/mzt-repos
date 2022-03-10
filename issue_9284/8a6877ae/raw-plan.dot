@@ -1,0 +1,4 @@
+digraph G {
+    node0 [shape = record, label="Constant ()\lMap (null = select(%1))\l-\l- %1 =\l- Get issue_9284.public.t1 (u31)\l- Map true\l- Project (#2)\l-\l"]
+    node1 -> node0 [label = "%1\l"]
+}
