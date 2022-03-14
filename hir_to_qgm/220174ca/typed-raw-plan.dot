@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u39)\l- types = (bigint?, integer?)\l- keys = ()\l"]
+}

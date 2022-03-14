@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u43)\l- types = (bigint?, integer?)\l- keys = ()\l"]
+    node1 [shape = record, label="Get hir_to_qgm.public.s (u44)\l- types = (bigint?, integer?)\l- keys = ()\l"]
+    node2 [shape = record, label="InnerJoin %0 %1 on (#0 = #2)\l- types = (bigint?, integer?, bigint?, integer?)\l- keys = ()\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}

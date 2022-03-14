@@ -1,0 +1,5 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u47)\lFilter (!(exists(%1)) && !(exists(%2)))\l-\l- %1 =\l- Get hir_to_qgm.public.r (u47)\l- Filter (#0 = #^0)\l- Project (#1)\l-\l-\l- %2 =\l- Get hir_to_qgm.public.s (u48)\l- Filter (#0 = #^0)\l- Project (#1)\l-\l"]
+    node2 -> node0 [label = "%2\l"]
+    node1 -> node0 [label = "%1\l"]
+}

@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u39)\l- types = (bigint?, integer?)\l- keys = ()\lMap #0, #1\l- types = (bigint?, integer?, bigint?, integer?)\l- keys = ()\lProject (#2, #3)\l- types = (bigint?, integer?)\l- keys = ()\l"]
+    node1 [shape = record, label="Get hir_to_qgm.public.s (u40)\l- types = (bigint?, integer?)\l- keys = ()\lMap #0, #1\l- types = (bigint?, integer?, bigint?, integer?)\l- keys = ()\lProject (#2, #3)\l- types = (bigint?, integer?)\l- keys = ()\l"]
+    node2 [shape = record, label="Union %0 %1\l- types = (bigint?, integer?)\l- keys = ()\lDistinct\l- types = (bigint?, integer?)\l- keys = ()\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}

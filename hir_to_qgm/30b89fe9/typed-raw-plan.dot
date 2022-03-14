@@ -1,0 +1,5 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u47)\l- types = (bigint?, integer?)\l- keys = ()\lFilter (select(%1) && select(%2))\l- types = (bigint?, integer?)\l- keys = ()\l-\l- %1 =\l- Get hir_to_qgm.public.r (u47)\l- types = (bigint?, integer?)\l- keys = ()\l- Filter (#0 = #^0)\l- types = (bigint?, integer?)\l- keys = ()\l- Project (#1)\l- types = (integer?)\l- keys = ()\l- Reduce group=() all((#^1 \>= #0))\l- types = (boolean?)\l- keys = ()\l-\l-\l- %2 =\l- Get hir_to_qgm.public.s (u48)\l- types = (bigint?, integer?)\l- keys = ()\l- Filter (#0 = #^0)\l- types = (bigint?, integer?)\l- keys = ()\l- Project (#1)\l- types = (integer?)\l- keys = ()\l- Reduce group=() all((#^1 \>= #0))\l- types = (boolean?)\l- keys = ()\l-\l"]
+    node2 -> node0 [label = "%2\l"]
+    node1 -> node0 [label = "%1\l"]
+}

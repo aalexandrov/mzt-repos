@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label="CallTable generate_series(0, 10, 2)\l"]
+}

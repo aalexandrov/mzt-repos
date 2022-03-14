@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u39)\l- types = (bigint?, integer?)\l- keys = ()\l"]
+    node1 [shape = record, label="CallTable wrap2((#^0 * i32toi64(#^1)), \"a\", (#^0 * i32toi64(#^1)), \"b\")\l- types = (bigint?, text)\l- keys = ()\l"]
+    node2 [shape = record, label="LeftOuterJoin %0 %1 on (#0 = #2)\l- types = (bigint?, integer?, bigint?, text?)\l- keys = ()\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}

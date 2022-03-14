@@ -1,0 +1,83 @@
+digraph G {
+    compound = true
+    labeljust = l
+    label = ""
+    node [ shape = box ]
+    subgraph cluster7 {
+        label = "Box7:Select"
+        boxhead7 [ shape = record, label = "{ Distinct: Enforce| 0: Q6.C0| 1: Q6.C1 }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q6 [ label = "Q6(F)" ]
+        }
+    }
+    subgraph cluster6 {
+        label = "Box6:Union"
+        boxhead6 [ shape = record, label = "{ Distinct: Preserve| 0: Q4.C0| 1: Q4.C1 }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q4 [ label = "Q4(F)" ]
+            Q5 [ label = "Q5(F)" ]
+        }
+    }
+    subgraph cluster2 {
+        label = "Box2:Select"
+        boxhead2 [ shape = record, label = "{ Distinct: Preserve| 0: Q1.C2| 1: Q1.C3 }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q1 [ label = "Q1(F)" ]
+        }
+    }
+    subgraph cluster1 {
+        label = "Box1:Select"
+        boxhead1 [ shape = record, label = "{ Distinct: Preserve| 0: Q0.C0| 1: Q0.C1| 2: Q0.C0| 3: Q0.C1 }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q0 [ label = "Q0(F)" ]
+        }
+    }
+    subgraph cluster0 {
+        label = "Box0:Get"
+        boxhead0 [ shape = record, label = "{ Distinct: Preserve| 0: C0| 1: C1 }" ]
+        {
+            rank = same
+        }
+    }
+    subgraph cluster5 {
+        label = "Box5:Select"
+        boxhead5 [ shape = record, label = "{ Distinct: Preserve| 0: Q3.C2| 1: Q3.C3 }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q3 [ label = "Q3(F)" ]
+        }
+    }
+    subgraph cluster4 {
+        label = "Box4:Select"
+        boxhead4 [ shape = record, label = "{ Distinct: Preserve| 0: Q2.C0| 1: Q2.C1| 2: Q2.C0| 3: Q2.C1 }" ]
+        {
+            rank = same
+            node [ shape = circle ]
+            Q2 [ label = "Q2(F)" ]
+        }
+    }
+    subgraph cluster3 {
+        label = "Box3:Get"
+        boxhead3 [ shape = record, label = "{ Distinct: Preserve| 0: C0| 1: C1 }" ]
+        {
+            rank = same
+        }
+    }
+    edge [ arrowhead = none, style = dashed ]
+    Q6 -> boxhead6 [ lhead = cluster6 ]
+    Q4 -> boxhead2 [ lhead = cluster2 ]
+    Q5 -> boxhead5 [ lhead = cluster5 ]
+    Q1 -> boxhead1 [ lhead = cluster1 ]
+    Q0 -> boxhead0 [ lhead = cluster0 ]
+    Q3 -> boxhead4 [ lhead = cluster4 ]
+    Q2 -> boxhead3 [ lhead = cluster3 ]
+}

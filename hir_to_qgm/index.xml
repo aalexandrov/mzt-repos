@@ -1,0 +1,170 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>41fc8f0b</id>
+    <sql>set qgm_optimizations_experimental=true; select 1</sql>
+  </query>
+  <query>
+    <id>755c9f04</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R, S
+WHERE
+  R.x = S.x</sql>
+  </query>
+  <query>
+    <id>4fda5077</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  EXCEPT
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>96130613</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  (VALUES (1 + 0, 2 + 0), (3 + 0, 4 + 0)) AS R(a,b)</sql>
+  </query>
+  <query>
+    <id>30b89fe9</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R
+WHERE
+  R.y &gt;= ALL(SELECT X.y FROM R as X WHERE X.x = R.x) AND
+  R.y &gt;= ALL(SELECT X.y FROM S as X WHERE X.x = R.x);</sql>
+  </query>
+  <query>
+    <id>882fb9a4</id>
+    <sql>SET qgm_optimizations_experimental = true;
+select 1;</sql>
+  </query>
+  <query>
+    <id>220174ca</id>
+    <sql>SET qgm_optimizations_experimental = TRUE;
+SELECT * FROM R</sql>
+  </query>
+  <query>
+    <id>862817c8</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT * FROM generate_series(0, 10, 2)</sql>
+  </query>
+  <query>
+    <id>97cb79ba</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R
+WHERE
+  EXISTS(SELECT X.y, X.y + 1 FROM R as X WHERE X.x != 5) AND
+  EXISTS(SELECT X.y, X.y + 1 FROM S as X WHERE X.x != 5);</sql>
+  </query>
+  <query>
+    <id>f67f67e4</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R
+WHERE
+  NOT EXISTS(SELECT X.y FROM R as X WHERE X.x = R.x) AND
+  NOT EXISTS(SELECT X.y FROM S as X WHERE X.x = R.x);</sql>
+  </query>
+  <query>
+    <id>d41d8cd9</id>
+    <sql></sql>
+  </query>
+  <query>
+    <id>8e567e4e</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  UNION
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>7e2e64f2</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R INNER JOIN S ON R.x = S.x</sql>
+  </query>
+  <query>
+    <id>5b653d1b</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R LEFT OUTER JOIN LATERAL (VALUES (x * y, 'a'), (x * y, 'b')) AS S(u, v) 
+ON x = u</sql>
+  </query>
+  <query>
+    <id>5d54d3d6</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R
+WHERE
+  EXISTS(SELECT X.y FROM R as X WHERE X.x = R.x) AND
+  EXISTS(SELECT X.y FROM S as X WHERE X.x = R.x);</sql>
+  </query>
+  <query>
+    <id>5cc59f4a</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R
+WHERE
+  EXISTS(SELECT X.y FROM R as X WHERE X.x != 5) AND
+  EXISTS(SELECT X.y FROM S as X WHERE X.x != 5);</sql>
+  </query>
+  <query>
+    <id>733b9054</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R,
+  LATERAL (VALUES (x * y, 'a'), (x * y, 'b')) AS S(u, v) 
+WHERE
+  x = u</sql>
+  </query>
+  <query>
+    <id>62a65c0a</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  R INNER JOIN S USING(x)</sql>
+  </query>
+  <query>
+    <id>bd93ab7d</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT * FROM (VALUES (1))</sql>
+  </query>
+  <query>
+    <id>d52a5757</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  INTERSECT
+  (SELECT * FROM S)</sql>
+  </query>
+</queries>

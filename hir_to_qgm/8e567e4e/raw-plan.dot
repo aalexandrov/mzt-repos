@@ -1,0 +1,7 @@
+digraph G {
+    node0 [shape = record, label="Get hir_to_qgm.public.r (u39)\lMap #0, #1\lProject (#2, #3)\l"]
+    node1 [shape = record, label="Get hir_to_qgm.public.s (u40)\lMap #0, #1\lProject (#2, #3)\l"]
+    node2 [shape = record, label="Union %0 %1\lDistinct\l"]
+    node1 -> node2 [label = "%1\l"]
+    node0 -> node2 [label = "%0\l"]
+}
