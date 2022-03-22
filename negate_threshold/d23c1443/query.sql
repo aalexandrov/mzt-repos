@@ -1,6 +1,0 @@
-SELECT
-  *
-FROM
-  (SELECT * FROM R)
-  UNION
-  (SELECT * FROM S)

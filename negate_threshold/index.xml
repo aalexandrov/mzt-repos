@@ -1,17 +1,9 @@
 <?xml-stylesheet type="text/xsl" href="index.xsl"?>
 <queries>
   <query>
-    <id>926ccdbf</id>
-    <sql>SELECT
-  *
-FROM
-  (SELECT * FROM R)
-  EXCEPT ALL
-  (SELECT * FROM S)</sql>
-  </query>
-  <query>
-    <id>eeae67ad</id>
-    <sql>SELECT
+    <id>4fda5077</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
   *
 FROM
   (SELECT * FROM R)
@@ -19,8 +11,9 @@ FROM
   (SELECT * FROM S)</sql>
   </query>
   <query>
-    <id>1100a656</id>
-    <sql>SELECT
+    <id>a27c73de</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
   *
 FROM
   (SELECT * FROM R)
@@ -28,17 +21,9 @@ FROM
   (SELECT * FROM S)</sql>
   </query>
   <query>
-    <id>4dd59bc1</id>
-    <sql>SELECT
-  *
-FROM
-  (SELECT * FROM R)
-  INTERSECT
-  (SELECT * FROM S)</sql>
-  </query>
-  <query>
-    <id>58b59580</id>
-    <sql>SELECT
+    <id>d05a5f88</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
   *
 FROM
   (SELECT * FROM R)
@@ -46,12 +31,33 @@ FROM
   (SELECT * FROM S)</sql>
   </query>
   <query>
-    <id>d23c1443</id>
-    <sql>SELECT
+    <id>8e567e4e</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
   *
 FROM
   (SELECT * FROM R)
   UNION
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>4ea4188c</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  EXCEPT ALL
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>d52a5757</id>
+    <sql>SET qgm_optimizations_experimental = true;
+SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  INTERSECT
   (SELECT * FROM S)</sql>
   </query>
 </queries>

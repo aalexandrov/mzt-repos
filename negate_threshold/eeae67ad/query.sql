@@ -1,6 +1,0 @@
-SELECT
-  *
-FROM
-  (SELECT * FROM R)
-  EXCEPT
-  (SELECT * FROM S)
