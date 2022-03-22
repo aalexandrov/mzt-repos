@@ -1,7 +1,0 @@
-SET qgm_optimizations_experimental = true;
-SELECT
-  *
-FROM
-  (SELECT * FROM R)
-  INTERSECT ALL
-  (SELECT * FROM S)
