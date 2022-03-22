@@ -1,0 +1,57 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>926ccdbf</id>
+    <sql>SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  EXCEPT ALL
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>eeae67ad</id>
+    <sql>SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  EXCEPT
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>1100a656</id>
+    <sql>SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  INTERSECT ALL
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>4dd59bc1</id>
+    <sql>SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  INTERSECT
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>58b59580</id>
+    <sql>SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  UNION ALL
+  (SELECT * FROM S)</sql>
+  </query>
+  <query>
+    <id>d23c1443</id>
+    <sql>SELECT
+  *
+FROM
+  (SELECT * FROM R)
+  UNION
+  (SELECT * FROM S)</sql>
+  </query>
+</queries>
