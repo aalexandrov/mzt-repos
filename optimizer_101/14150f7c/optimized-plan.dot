@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label="Get optimizer_101.public.a (u9)\lFilter (#0 \> 0), (#0 \> 5)\lProject (#0)\l"]
+}

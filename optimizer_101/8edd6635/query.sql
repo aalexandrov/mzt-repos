@@ -1,0 +1,6 @@
+SELECT
+  *
+FROM
+  A
+WHERE
+  EXISTS(SELECT * FROM B WHERE b1 = a1)

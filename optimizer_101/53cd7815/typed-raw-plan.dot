@@ -1,0 +1,11 @@
+digraph G {
+    node0 [shape = record, label="Get optimizer_101.public.a (u9)\l- types = (integer?, integer?, integer?)\l- keys = ()\l"]
+    node1 [shape = record, label="Get optimizer_101.public.b (u10)\l- types = (integer?, integer?)\l- keys = ()\l"]
+    node2 [shape = record, label="InnerJoin %0 %1 on true\l- types = (integer?, integer?, integer?, integer?, integer?)\l- keys = ()\l"]
+    node3 [shape = record, label="Get optimizer_101.public.c (u11)\l- types = (integer?)\l- keys = ()\l"]
+    node4 [shape = record, label="InnerJoin %2 %3 on true\l- types = (integer?, integer?, integer?, integer?, integer?, integer?)\l- keys = ()\lFilter ((#0 = #3) && (#4 = #5))\l- types = (integer?, integer?, integer?, integer?, integer?, integer?)\l- keys = ()\l"]
+    node1 -> node2 [label = "%1\l"]
+    node2 -> node4 [label = "%2\l"]
+    node3 -> node4 [label = "%3\l"]
+    node0 -> node2 [label = "%0\l"]
+}

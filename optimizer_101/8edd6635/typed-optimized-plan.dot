@@ -1,0 +1,9 @@
+digraph G {
+    node0 [shape = record, label="Get optimizer_101.public.a (u9)\l- types = (integer?, integer?, integer?)\l- keys = ()\l"]
+    node1 [shape = record, label="Get optimizer_101.public.a (u9)\l- types = (integer?, integer?, integer?)\l- keys = ()\lFilter !(isnull(#0))\l- types = (integer, integer?, integer?)\l- keys = ()\lProject (#0)\l- types = (integer)\l- keys = ()\lDistinct group=(#0)\l- types = (integer)\l- keys = ((#0))\lArrangeBy (#0)\l- types = (integer)\l- keys = ((#0))\l"]
+    node2 [shape = record, label="Get optimizer_101.public.b (u10)\l- types = (integer?, integer?)\l- keys = ()\lFilter !(isnull(#0))\l- types = (integer, integer?)\l- keys = ()\lProject (#0)\l- types = (integer)\l- keys = ()\lDistinct group=(#0)\l- types = (integer)\l- keys = ((#0))\lArrangeBy (#0)\l- types = (integer)\l- keys = ((#0))\l"]
+    node3 [shape = record, label="Join %0 %1 %2 (= #0 #3 #4)\l- implementation = Differential %0 %1.(#0) %2.(#0)\l- types = (integer?, integer?, integer?, integer, integer)\l- keys = ()\lProject (#0..=#2)\l- types = (integer?, integer?, integer?)\l- keys = ()\l"]
+    node1 -> node3 [label = "%1\l"]
+    node2 -> node3 [label = "%2\l"]
+    node0 -> node3 [label = "%0\l"]
+}

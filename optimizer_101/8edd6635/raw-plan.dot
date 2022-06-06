@@ -1,0 +1,4 @@
+digraph G {
+    node0 [shape = record, label="Get optimizer_101.public.a (u9)\lFilter exists(%1)\l-\l- %1 =\l- Get optimizer_101.public.b (u10)\l- Filter (#0 = #^0)\l-\l"]
+    node1 -> node0 [label = "%1\l"]
+}

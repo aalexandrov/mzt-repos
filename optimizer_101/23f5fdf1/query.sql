@@ -1,0 +1,6 @@
+SELECT
+  * 
+FROM
+  A
+  INNER JOIN B ON a1 = b1 
+  INNER JOIN C ON b2 = c1;

@@ -1,0 +1,48 @@
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<queries>
+  <query>
+    <id>53cd7815</id>
+    <sql>SELECT
+  * 
+FROM
+  A, B, C 
+WHERE
+  a1 = b1 AND b2 = c1;</sql>
+  </query>
+  <query>
+    <id>23f5fdf1</id>
+    <sql>SELECT
+  * 
+FROM
+  A
+  INNER JOIN B ON a1 = b1 
+  INNER JOIN C ON b2 = c1;</sql>
+  </query>
+  <query>
+    <id>82e43839</id>
+    <sql>SELECT
+  * 
+FROM
+  A
+  LEFT OUTER JOIN B ON a1 = b1 
+  RIGHT OUTER JOIN C ON b2 = c1;</sql>
+  </query>
+  <query>
+    <id>8edd6635</id>
+    <sql>SELECT
+  *
+FROM
+  A
+WHERE
+  EXISTS(SELECT * FROM B WHERE b1 = a1)</sql>
+  </query>
+  <query>
+    <id>14150f7c</id>
+    <sql>SELECT
+  *
+FROM
+  v2
+WHERE
+  a1 &gt; 0;</sql>
+  </query>
+</queries>

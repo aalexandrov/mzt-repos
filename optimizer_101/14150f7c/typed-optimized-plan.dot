@@ -1,0 +1,3 @@
+digraph G {
+    node0 [shape = record, label="Get optimizer_101.public.a (u9)\l- types = (integer?, integer?, integer?)\l- keys = ()\lFilter (#0 \> 0), (#0 \> 5)\l- types = (integer, integer?, integer?)\l- keys = ()\lProject (#0)\l- types = (integer)\l- keys = ()\l"]
+}

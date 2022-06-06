@@ -1,0 +1,6 @@
+SELECT
+  * 
+FROM
+  A
+  LEFT OUTER JOIN B ON a1 = b1 
+  RIGHT OUTER JOIN C ON b2 = c1;
